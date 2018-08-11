@@ -1,9 +1,13 @@
 'use strict';
 
+
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
+
+
+//app.models.user.acls = require('./user-acls.json');
 
 app.start = function() {
   // start the web server

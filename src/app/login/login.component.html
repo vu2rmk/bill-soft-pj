@@ -1,5 +1,5 @@
-<form (submit)=loginUser($event)>
-    <input type="text" placeholder="username" id="username">
-    <input type="password" placeholder="password" id="password">
-    <input type="submit" value="Submit">
+<form [formGroup]="form" (ngSubmit)=login()>
+    <input type="text" placeholder="username" id="username" formControlName="username">
+    <input type="password" placeholder="password" id="password" formControlName="password">
+    <button type="submit" color="primary">Login</button>
 </form>

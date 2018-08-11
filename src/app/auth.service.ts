@@ -8,6 +8,17 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
+  //private loggedInStatus = false;
+
+  setLoggedIn(value: string){
+
+    localStorage.setItem("isLoggedIn",value);
+  }
+
+  get isLoggedIn(){
+    return localStorage.getItem("isLoggedIn");
+  }
+
   getUserDetails(email, password){
 
     return this.http.post('https://reqres.in/api/login',{
